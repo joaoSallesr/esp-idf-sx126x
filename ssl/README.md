@@ -36,7 +36,6 @@ Set the information of your SSL server.
 # Start the SSL server
 - C language
 	```
-	cd esp-idf-ssl-client/
 	cd clang-tls-communication
 	make
 	./server
@@ -45,7 +44,6 @@ Set the information of your SSL server.
 
 - python script
 	```
-	cd esp-idf-ssl-client/
 	cd python-tls-communication
 	python3 server.py
 	```

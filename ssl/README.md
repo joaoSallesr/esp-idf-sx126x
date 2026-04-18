@@ -40,11 +40,12 @@ Set the information of your SSL server.
 	make
 	./server
 	```
+	<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/153253a2-47a8-485f-a8ff-9780526ed5e7" />
 
 - python script
 	```
 	cd python-tls-communication
 	python3 server.py
 	```
-
+	<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/577c56ea-1f9b-4a7b-9cc2-84b1ac513ee2" />
 

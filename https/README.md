@@ -19,6 +19,7 @@ chmod 777 mkkey.sh
 ./mkkey.sh
 idf.py menuconfig
 idf.py flash
+```
 
 # Configuration
 <img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/b878ab55-13ca-4e23-93d1-a80d4d30bd8b" />

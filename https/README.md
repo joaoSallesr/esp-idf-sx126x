@@ -21,6 +21,16 @@ idf.py menuconfig
 idf.py flash
 ```
 
+mkkey.sh creates a server certificate file.   
+The server certificate file is associated with the HTTPS server's IP address.   
+mkkey.sh automatically obtains the HTTPS server's IP address.   
+To manually configure the HTTPS server's IP address, change it as follows:   
+```
+IP="192.168.0.123"
+openssl req -x509 -new -nodes -key server.key -subj "/CN=${IP}" -days 10000 -out server.crt
+```
+
+
 # Configuration
 <img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/b878ab55-13ca-4e23-93d1-a80d4d30bd8b" />
 <img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/2eabcd50-df1d-44d7-ab36-3a7809d9f654" />

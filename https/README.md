@@ -47,5 +47,5 @@ Set the information of your HTTPS server.
 ```
 python3 https-server.py
 ```
-<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/f230ae5d-54bc-41c4-b80d-7d63b46bcc4e" />
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/ae3546fa-bcef-4551-ab74-247783d126d4" />
 

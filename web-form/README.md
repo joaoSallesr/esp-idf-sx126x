@@ -82,6 +82,6 @@ The Copy button copies the received data to the clipboard.
 # WEB Pages
 WEB Pages are stored in the html folder.   
 I used [this](https://bulma.io/) open source css.   
-You cam change root.html as you like.   
+You can change root.html as you like.   
 
 

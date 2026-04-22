@@ -31,7 +31,8 @@ if __name__ == '__main__':
 
 	ctx = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
 	ctx.load_cert_chain('server.crt', keyfile='server.key')
-	ctx.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
+	#ctx.options |= ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
+	ctx.minimum_version = ssl.TLSVersion.TLSv1_2
 
 	server = HTTPServer((host, args.port), my_handler)
 	server.socket = ctx.wrap_socket(server.socket)

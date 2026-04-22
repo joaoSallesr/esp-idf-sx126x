@@ -21,9 +21,9 @@ It's a great job.
 <img width="844" height="779" alt="Image" src="https://github.com/user-attachments/assets/eec0862a-d599-4b93-ada2-1844a2369ff5" />
 
 # Configuration
-<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/45a3cfaf-200b-4740-b4b8-5ef5107ff8da" />
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/45a3cfaf-200b-4740-b4b8-5ef5107ff8da" />   
 
-<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/1a72ee18-a18a-4c8e-9fc4-2612622a310f" />
+<img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/1a72ee18-a18a-4c8e-9fc4-2612622a310f" />   
 
 ## WiFi Setting
 Set the information of your access point.   
@@ -77,9 +77,9 @@ Enter the data to send in the TextBox and press the Send button.
 The received data will be displayed in the TextBox.   
 The Change button changes the number of lines displayed.   
 The Copy button copies the received data to the clipboard.   
-<img width="844" height="779" alt="Image" src="https://github.com/user-attachments/assets/bcca0d64-3dff-47e2-a6c4-54a2b6b923de" />
+<img width="844" height="779" alt="Image" src="https://github.com/user-attachments/assets/bcca0d64-3dff-47e2-a6c4-54a2b6b923de" />   
 
-<img width="844" height="892" alt="Image" src="https://github.com/user-attachments/assets/b8462377-3640-4701-8ed1-07f4292925f9" />
+<img width="844" height="892" alt="Image" src="https://github.com/user-attachments/assets/b8462377-3640-4701-8ed1-07f4292925f9" />   
 
 # WEB Pages
 WEB Pages are stored in the html folder.   

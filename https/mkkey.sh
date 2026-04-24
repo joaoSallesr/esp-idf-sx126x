@@ -1,8 +1,8 @@
 #!/bin/bash
 #set -x
 IP=`ip addr show | grep -v 127.0.0.1 | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | head -n 1`
-echo "Your ssl server is ${IP}."
-read -p "Is the SSL Server correct? (y/n): " yn
+echo "Your HTTPS server is ${IP}."
+read -p "Is the HTTPS Server correct? (y/n): " yn
 if [[ $yn == [nN] ]]; then
 	echo "Edit this file manualy."
 	exit

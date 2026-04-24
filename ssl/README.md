@@ -23,7 +23,7 @@ idf.py flash
 
 mkkey.sh creates a server certificate file.   
 The server certificate file is associated with the SSL server's IP address.   
-mkkey.sh automatically obtains the SSL server's IP address.   
+mkkey.sh automatically retrieves the IP address of the server on which the script is executed and treats that address as an SSL server.   
 To manually configure the SSL server's IP address, change it as follows:   
 ```
 IP="192.168.0.123"

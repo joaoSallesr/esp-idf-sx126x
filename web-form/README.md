@@ -66,18 +66,19 @@ or
 http://esp32-server.local/
 ```
 
-<img width="844" height="779" alt="Image" src="https://github.com/user-attachments/assets/14e1d240-bbc3-4b79-bab3-e138b11e1c1f" />
+<img width="901" height="890" alt="Image" src="https://github.com/user-attachments/assets/47aa7958-37f7-4b88-999b-772149040c51" />
+<img width="901" height="890" alt="Image" src="https://github.com/user-attachments/assets/ba24f64c-a8a5-4f20-943d-de25b112472b" />
 
 ### Web to LoRa
 Enter the data to send in the TextBox and press the Send button.   
-<img width="844" height="779" alt="Image" src="https://github.com/user-attachments/assets/bc1f44f9-69fd-46af-a831-b0fd3f23bb0c" />
+<img width="901" height="890" alt="Image" src="https://github.com/user-attachments/assets/de182cd8-9fea-44c1-ab35-fe7e4647467a" />
 
 ### LoRa to Web
 The received data will be displayed in the TextBox.   
 The Change button changes the number of lines displayed.   
 The Copy button copies the received data to the clipboard.   
-<img width="844" height="779" alt="Image" src="https://github.com/user-attachments/assets/bcca0d64-3dff-47e2-a6c4-54a2b6b923de" />   
-<img width="844" height="892" alt="Image" src="https://github.com/user-attachments/assets/b8462377-3640-4701-8ed1-07f4292925f9" />   
+<img width="901" height="890" alt="Image" src="https://github.com/user-attachments/assets/c5d86191-1ac5-4f5a-9a0a-8020835ad005" />
+<img width="901" height="890" alt="Image" src="https://github.com/user-attachments/assets/39ec53cc-a874-4c82-a9f3-48f6816daa59" />
 
 # WEB Pages
 WEB Pages are stored in the html folder.   

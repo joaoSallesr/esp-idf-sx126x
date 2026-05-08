@@ -194,6 +194,19 @@ void task_rx(void *pvParameters)
 			GetPacketStatus(&rssi, &snr);
 			ESP_LOGI(pcTaskGetName(NULL), "rssi=%d[dBm] snr=%d[dB]", rssi, snr);
 
+			// WebSockets can only handle printable characters.
+			// Therefore, determine whether the characters are printable.
+			bool printable = true;
+			for (int i=0;i<rxLen;i++) {
+				int c = buf[i];
+				if (!isprint(c)) printable = false;
+			}
+			ESP_LOGI(pcTaskGetName(NULL), "printable=%d", printable);
+			if (!printable) {
+				ESP_LOGW(TAG, "Contains characters that cannot be printed");
+				continue;
+			}
+
 			buf[rxLen] = 0;
 			cJSON *root;
 			root = cJSON_CreateObject();
@@ -201,15 +214,15 @@ void task_rx(void *pvParameters)
 			cJSON_AddStringToObject(root, "payload", (char *)buf);
 			//char *my_json_string = cJSON_Print(root);
 			char *my_json_string = cJSON_PrintUnformatted(root);
-			int rxLen = strlen(my_json_string);
+			int my_json_length = strlen(my_json_string);
 			ESP_LOGD(pcTaskGetName(NULL), "my_json_string=[%s]",my_json_string);
 			cJSON_Delete(root);
 
 			size_t spacesAvailable = xMessageBufferSpacesAvailable( xMessageBufferTrans );
 			ESP_LOGI(pcTaskGetName(NULL), "spacesAvailable=%d", spacesAvailable);
-			size_t sended = xMessageBufferSend(xMessageBufferTrans, my_json_string, rxLen, 100);
-			if (sended != rxLen) {
-				ESP_LOGE(pcTaskGetName(NULL), "xMessageBufferSend fail rxLen=%d sended=%d", rxLen, sended);
+			size_t sended = xMessageBufferSend(xMessageBufferTrans, my_json_string, my_json_length, 100);
+			if (sended != my_json_length) {
+				ESP_LOGE(pcTaskGetName(NULL), "xMessageBufferSend fail my_json_length=%d sended=%d", my_json_length, sended);
 				break;
 			}
 			cJSON_free(my_json_string);
@@ -252,13 +265,6 @@ void app_main()
 	configASSERT( xMessageBufferTrans );
 	xMessageBufferRecv = xMessageBufferCreate(xBufferSizeBytes);
 	configASSERT( xMessageBufferRecv );
-
-	// Get the local IP address
-	esp_netif_ip_info_t ip_info;
-	ESP_ERROR_CHECK(esp_netif_get_ip_info(esp_netif_get_handle_from_ifkey("WIFI_STA_DEF"), &ip_info));
-	char cparam0[64];
-	sprintf(cparam0, IPSTR, IP2STR(&ip_info.ip));
-	//sprintf(cparam0, "%s.local", CONFIG_MDNS_HOSTNAME);
 
 	// Initialize mdns
 	initialise_mdns();
@@ -314,11 +320,18 @@ void app_main()
 #endif
 	LoRaConfig(spreadingFactor, bandwidth, codingRate, preambleLength, payloadLen, crcOn, invertIrq);
 
+	// Get the local IP address
+	esp_netif_ip_info_t ip_info;
+	ESP_ERROR_CHECK(esp_netif_get_ip_info(esp_netif_get_handle_from_ifkey("WIFI_STA_DEF"), &ip_info));
+	char cparam0[64];
+	sprintf(cparam0, IPSTR, IP2STR(&ip_info.ip));
+	ESP_LOGI(TAG, "cparam0=[%s]", cparam0);
+
 	// Start web socket server
 	ws_server_start();
 
 	// Start web server
-	xTaskCreate(&server_task, "server_task", 1024*2, (void *)cparam0, 5, NULL);
+	xTaskCreate(&server_task, "server_task", 1024*4, (void *)cparam0, 5, NULL);
 
 	// Start web client
 	xTaskCreate(&client_task, "client_task", 1024*4, NULL, 5, NULL);
@@ -330,5 +343,8 @@ void app_main()
 	xTaskCreate(&task_rx, "RX", 1024*4, NULL, 5, NULL);
 	xTaskCreate(&task_dummy, "DUMMY", 1024*4, NULL, 5, NULL);
 #endif
-}
 
+	while(1) {
+		vTaskDelay(10);
+	}
+}

@@ -18,7 +18,6 @@ Data received from LoRa is displayed in a web form.
 I used [this](https://github.com/Molorius/esp32-websocket) component.   
 This component can communicate directly with the browser.   
 It's a great job.   
-<img width="844" height="779" alt="Image" src="https://github.com/user-attachments/assets/eec0862a-d599-4b93-ada2-1844a2369ff5" />
 
 # Configuration
 <img width="659" height="486" alt="Image" src="https://github.com/user-attachments/assets/45a3cfaf-200b-4740-b4b8-5ef5107ff8da" />   

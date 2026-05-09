@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <inttypes.h>
 #include <string.h>
+#include <ctype.h>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -133,7 +134,6 @@ esp_err_t wifi_init_sta(void)
 	return ret_value;
 }
 
-
 #if CONFIG_SENDER
 void task_tx(void *pvParameters)
 {
@@ -179,6 +179,17 @@ void task_rx(void *pvParameters)
 			int8_t rssi, snr;
 			GetPacketStatus(&rssi, &snr);
 			ESP_LOGI(pcTaskGetName(NULL), "rssi=%d[dBm] snr=%d[dB]", rssi, snr);
+
+			bool printable = true;
+			for (int i=0;i<rxLen;i++) {
+				int c = buf[i];
+				if (!isprint(c)) printable = false;
+			}
+			ESP_LOGI(pcTaskGetName(NULL), "printable=%d", printable);
+			if (!printable) {
+				ESP_LOGW(TAG, "Contains characters that cannot be printed");
+				continue;
+			}
 
 			size_t spacesAvailable = xMessageBufferSpacesAvailable( xMessageBufferTrans );
 			ESP_LOGI(pcTaskGetName(NULL), "spacesAvailable=%d", spacesAvailable);

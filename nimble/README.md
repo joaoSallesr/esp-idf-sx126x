@@ -69,7 +69,7 @@ I used [this](https://play.google.com/store/apps/details?id=de.kai_morich.serial
 	![Image](https://github.com/user-attachments/assets/9b0f23bc-86f4-4631-81e6-1df8d876f41b)
 
 - Connect to device   
-	You can view LoRa packets using Android.   
+	You can send and receive LoRa packets using an Android device.   
 	![Image](https://github.com/user-attachments/assets/e84fa3b1-a0ee-4af3-a64c-695a5b383857)
 
 # iOS Application   

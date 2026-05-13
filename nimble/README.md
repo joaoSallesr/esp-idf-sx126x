@@ -59,18 +59,18 @@ I used [this](https://play.google.com/store/apps/details?id=de.kai_morich.serial
 - pair with ESP_NIMBLE_SERVER   
 
 - Launch the app and select device  
-Menu->Devices->Bluetooth LE   
+	Menu->Devices->Bluetooth LE   
 
 - Long press the device and select the Edit menu   
-![Image](https://github.com/user-attachments/assets/2d36b757-585a-4310-919c-a57f136c7f20)
+	![Image](https://github.com/user-attachments/assets/2d36b757-585a-4310-919c-a57f136c7f20)
 
 - Select Custom and specify UUID   
-The UUIDs are different for ESP-Bluedroid and ESP-NimBLE.   
-![Image](https://github.com/user-attachments/assets/9b0f23bc-86f4-4631-81e6-1df8d876f41b)
+	The UUIDs are different for ESP-Bluedroid and ESP-NimBLE.   
+	![Image](https://github.com/user-attachments/assets/9b0f23bc-86f4-4631-81e6-1df8d876f41b)
 
 - Connect to device   
-You can communicate to UNO using android.   
-![Image](https://github.com/user-attachments/assets/e84fa3b1-a0ee-4af3-a64c-695a5b383857)
+	You can view LoRa packets using Android.   
+	![Image](https://github.com/user-attachments/assets/e84fa3b1-a0ee-4af3-a64c-695a5b383857)
 
 # iOS Application   
 [This](https://apps.apple.com/jp/app/bluetooth-v2-1-spp-setup/id6449416841) might work, but I don't have iOS so I don't know.   

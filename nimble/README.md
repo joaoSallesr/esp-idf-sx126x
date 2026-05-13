@@ -7,13 +7,13 @@ This project uses the ESP-NimBLE host stack.
 ```
            +------------+          +------------+          +------------+
            |            |          |            |          |            |
-           | Smartphone |--(USB)-->|   ESP32    |--(SPI)-->|   SX126x   |==(LoRa)==>
+           | Smartphone |--(BLE)-->|   ESP32    |--(SPI)-->|   SX126x   |==(LoRa)==>
            |            |          |            |          |            |
            +------------+          +------------+          +------------+
 
            +------------+          +------------+          +------------+
            |            |          |            |          |            |
-==(LoRa)==>|   SX126x   |--(SPI)-->|   ESP32    |--(USB)-->| Smartphone |
+==(LoRa)==>|   SX126x   |--(SPI)-->|   ESP32    |--(BLE)-->| Smartphone |
            |            |          |            |          |            |
            +------------+          +------------+          +------------+
 ```
@@ -28,7 +28,7 @@ Receive from BLE and send to LoRa.
 ```
            +------------+          +------------+          +------------+
            |            |          |            |          |            |
-           | Smartphone |--(USB)-->|   ESP32    |--(SPI)-->|   SX126x   |==(LoRa)==>
+           | Smartphone |--(BLE)-->|   ESP32    |--(SPI)-->|   SX126x   |==(LoRa)==>
            |            |          |            |          |            |
            +------------+          +------------+          +------------+
 ```
@@ -39,11 +39,11 @@ Communicate with Arduino Environment.
 I tested it with [this](https://github.com/nopnop2002/esp-idf-sx126x/tree/main/ArduinoCode/Ra01S-RX).   
 
 ### LoRa to BLE
-Receive from LoRa and send to USB.   
+Receive from LoRa and send to BLE.   
 ```
            +------------+          +------------+          +------------+
            |            |          |            |          |            |
-==(LoRa)==>|   SX126x   |--(SPI)-->|   ESP32    |--(USB)-->| Smartphone |
+==(LoRa)==>|   SX126x   |--(SPI)-->|   ESP32    |--(BLE)-->| Smartphone |
            |            |          |            |          |            |
            +------------+          +------------+          +------------+
 ```

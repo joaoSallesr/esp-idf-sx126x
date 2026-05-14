@@ -201,7 +201,7 @@ With this change it work.
 ![Image](https://github.com/user-attachments/assets/757ce3b9-7a16-4111-b39a-53acdca4d479)
 
 Two additional wires are required.   
-|SX126X||ESP32|ESP32-S2/S3|ESP32-C2/C3/C6|
+|SX126X||ESP32|ESP32-S2/S3|ESP32-Cx/Hx|
 |:-:|:-:|:-:|:-:|:-:|
 |TXEN|--|5|5|1|
 |RXEN|--|4|4|0|

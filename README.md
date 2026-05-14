@@ -165,7 +165,7 @@ Previously it was called HSPI_HOST / VSPI_HOST, but now it is called SPI2_HOST /
 
 # Wiring
 
-|SX126X||ESP32|ESP32-S2/S3|ESP32-C2/C3/C6|
+|SX126X||ESP32|ESP32-S2/S3|ESP32-Cx/Hx|
 |:-:|:-:|:-:|:-:|:-:|
 |BUSY|--|GPIO17|GPIO39|GPIO3|
 |RST|--|GPIO16|GPIO38|GPIO2|

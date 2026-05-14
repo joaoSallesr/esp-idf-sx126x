@@ -97,7 +97,6 @@ ESP-IDF V4.4 release branch reached EOL in July 2024.
 ```Shell
 git clone https://github.com/nopnop2002/esp-idf-sx126x
 cd esp-idf-sx126x/basic/
-idf.py set-target {esp32/esp32s2/esp32s3/esp32c2/esp32c3/esp32c6}
 idf.py menuconfig
 idf.py flash
 ```
